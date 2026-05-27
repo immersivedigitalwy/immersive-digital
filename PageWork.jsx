@@ -1,21 +1,21 @@
 /* eslint-disable */
 const WORK = [
   { id: "W_001", tag: "Real Estate Photo", ctx: "Residential listing · Interior + exterior",  ratio: "4 / 5",   category: "Real estate",
-    src: "photos/work-realestate-01.jpg", alt: "Log home exterior, Wyoming, daytime — wood siding, dark roof, mountain foothills" },
+    src: "work-realestate-01.jpg", alt: "Log home exterior, Wyoming, daytime — wood siding, dark roof, mountain foothills" },
   { id: "W_002", tag: "Drone",             ctx: "Acreage aerial survey",                       ratio: "16 / 10", category: "Drone",
-    src: "photos/work-drone-ranch.jpg", alt: "Aerial of Wyoming granite outcrops and pine forest" },
+    src: "work-drone-ranch.jpg", alt: "Aerial of Wyoming granite outcrops and pine forest" },
   { id: "W_003", tag: "Web Build",         ctx: "Small business · Brand site + lead capture",  ratio: "4 / 3",   category: "Web",
-    src: "photos/work-web-frozenropes.png", alt: "Recent web build — product hero, custom navigation, dark theme", focal: "top" },
+    src: "work-web-frozenropes.png", alt: "Recent web build — product hero, custom navigation, dark theme", focal: "top" },
   { id: "W_004", tag: "Twilight",          ctx: "Twilight exterior · Add-on session",          ratio: "4 / 5",   category: "Real estate",
-    src: "photos/work-twilight.jpg", alt: "Modern farmhouse exterior at blue hour — warm interior glow, red rock landscape behind" },
+    src: "work-twilight.jpg", alt: "Modern farmhouse exterior at blue hour — warm interior glow, red rock landscape behind" },
   { id: "W_005", tag: "360 Tour",          ctx: "Commercial 360 walkthrough",                  ratio: "16 / 10", category: "360",
-    src: "photos/work-360-triggerpoint.png", alt: "Matterport 360 scanner mid-shoot inside a luxury interior with chandeliers" },
+    src: "work-360-triggerpoint.jpg", alt: "Matterport 360 scanner mid-shoot inside a luxury interior with chandeliers" },
   { id: "W_006", tag: "Brand Audit",       ctx: "Brand audit · Local business fix list",       ratio: "1 / 1",   category: "Brand",
     status: "in-progress", label: "W_006 · AUDIT · IN PROGRESS" },
   { id: "W_007", tag: "Drone",             ctx: "Community aerial · Downtown overview",        ratio: "16 / 10", category: "Drone",
-    src: "photos/work-drone-laramie.jpg", alt: "Aerial of a stadium and university campus, late afternoon" },
+    src: "work-drone-laramie.jpg", alt: "Aerial of a stadium and university campus, late afternoon" },
   { id: "W_008", tag: "Real Estate Photo", ctx: "Modern home · Twilight + interior combo",     ratio: "4 / 5",   category: "Real estate",
-    src: "photos/work-realestate-02.jpg", alt: "Modern patio at dusk — firepit, board-and-batten siding, warm interior glow" },
+    src: "work-realestate-02.jpg", alt: "Modern patio at dusk — firepit, board-and-batten siding, warm interior glow" },
 ];
 
 const CATS = ["All", "Real estate", "Drone", "Web", "360", "Brand"];
@@ -141,13 +141,13 @@ function WorkTile({ w }) {
 function HorizontalScroller() {
   const FEATURED = [
     { id: "F_001", tag: "DRONE",            title: "Aerial Survey",          meta: "DRONE MAPPING · LANDSCAPE + PARCEL",
-      src: "photos/featured-drone-cabin.jpg", alt: "Aerial — red sandstone outcrop and a single cabin on the high plains" },
+      src: "featured-drone-cabin.jpg", alt: "Aerial — red sandstone outcrop and a single cabin on the high plains" },
     { id: "F_002", tag: "REAL ESTATE",      title: "Listing Photography",    meta: "INTERIOR + EXTERIOR · CUBICASA FLOOR PLAN · MLS-READY",
-      src: "photos/home-real-estate-hero.jpg", alt: "Modern home patio at dusk with firepit, Adirondack chairs, warm interior glow" },
+      src: "home-real-estate-hero.jpg", alt: "Modern home patio at dusk with firepit, Adirondack chairs, warm interior glow" },
     { id: "F_003", tag: "WEB BUILD",        title: "Brand Site",             meta: "WEB BUILD · STRIPE + LEAD CAPTURE",
-      src: "photos/home-web-hero.png", alt: "Recent web build — hero section, custom typography, dark theme", focal: "left top" },
+      src: "home-web-hero.png", alt: "Recent web build — hero section, custom typography, dark theme", focal: "left top" },
     { id: "F_004", tag: "360 / IMMERSIVE",  title: "Immersive Walkthrough",  meta: "MATTERPORT SCAN · COMMERCIAL · VR-READY",
-      src: "photos/work-360-triggerpoint.png", alt: "360 scanner mid-walkthrough inside a luxury interior, chandeliers, grand staircase" },
+      src: "work-360-triggerpoint.jpg", alt: "360 scanner mid-walkthrough inside a luxury interior, chandeliers, grand staircase" },
   ];
   return (
     <div style={{

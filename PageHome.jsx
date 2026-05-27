@@ -157,7 +157,7 @@ function PageHome({ onNavigate }) {
             <Parallax speed={0.08}>
               <PhotoSlot
                 ratio="3 / 5"
-                src="photos/home-real-estate-hero.jpg"
+                src="home-real-estate-hero.jpg"
                 alt="Modern Wyoming home patio at dusk — firepit, Adirondack chairs, warm interior glow through sliding doors"
                 caption="W_001 · REAL ESTATE · INTERIOR + EXTERIOR"
               />
@@ -166,7 +166,7 @@ function PageHome({ onNavigate }) {
               <div style={{ marginTop: 60 }}>
                 <PhotoSlot
                   ratio="4 / 5"
-                  src="photos/home-drone-hero.jpg"
+                  src="home-drone-hero.jpg"
                   alt="Aerial of the Laramie River winding through autumn cottonwoods — Wyoming, Albany County"
                   caption="W_002 · DRONE · AERIAL SURVEY"
                 />
@@ -176,7 +176,7 @@ function PageHome({ onNavigate }) {
               <div style={{ marginTop: 140 }}>
                 <PhotoSlot
                   ratio="3 / 4"
-                  src="photos/home-web-hero.png"
+                  src="home-web-hero.png"
                   alt="Recent web build — hero section, custom navigation, dark theme"
                   focal="left top"
                   caption="W_003 · WEB BUILD · BRAND SITE"
