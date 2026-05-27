@@ -1,0 +1,284 @@
+/* ============================================================
+   Immersive Digital Co — Design Tokens
+   Source of truth: BRANDING/2026 Rebrand/Immersive_Digital_Co_Brand_Kit
+   ------------------------------------------------------------
+   Lime is the brand. Use it as accent only. Never on more than
+   30% of a layout. Black is the dominant surface.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /* -------------------------------------
+     Core palette (from Brand Kit v1.1)
+     ------------------------------------- */
+  --idc-lime:        #C6F84E;
+  --idc-lime-deep:   #A8DA32;   /* hover / press for lime CTAs */
+  --idc-lime-soft:   rgba(198, 248, 78, 0.12);  /* glow / radial wash */
+
+  --idc-black:       #0A0A0A;
+  --idc-charcoal:    #282828;   /* dividers, borders, body type on light */
+  --idc-graphite:    #1A1A1A;   /* card surface 1-step above black */
+  --idc-gray:        #888888;   /* secondary metadata, captions */
+  --idc-gray-soft:   #3D3D3D;   /* hairline borders on dark */
+  --idc-offwhite:    #F5F5F5;
+  --idc-white:       #FFFFFF;
+
+  /* -------------------------------------
+     Semantic surface + text — DARK (default)
+     ------------------------------------- */
+  --bg:              var(--idc-black);
+  --bg-elevated:     var(--idc-graphite);
+  --bg-inset:        #050505;
+
+  --border:          var(--idc-gray-soft);
+  --border-strong:   var(--idc-charcoal);
+  --border-accent:   var(--idc-lime);
+
+  --fg:              var(--idc-white);
+  --fg-muted:        var(--idc-gray);
+  --fg-faint:        #5a5a5a;
+  --fg-accent:       var(--idc-lime);
+
+  --link:            var(--idc-lime);
+  --link-hover:      var(--idc-lime-deep);
+
+  /* CTA */
+  --cta-bg:          var(--idc-lime);
+  --cta-fg:          var(--idc-black);
+  --cta-bg-hover:    var(--idc-lime-deep);
+
+  /* -------------------------------------
+     Type
+     ------------------------------------- */
+  --font-sans:       "Poppins", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display:    var(--font-sans);
+  --font-mono:       "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace;
+
+  /* Scale — desktop. Mobile collapses ~20% via clamp where used. */
+  --text-xs:    11px;
+  --text-sm:    13px;
+  --text-base:  15px;
+  --text-md:    17px;
+  --text-lg:    20px;
+  --text-xl:    24px;
+  --text-2xl:   32px;
+  --text-3xl:   44px;
+  --text-4xl:   64px;
+  --text-5xl:   96px;
+  --text-6xl:   128px;
+  --text-7xl:   180px;
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semi:     600;
+  --weight-bold:     700;
+
+  /* Tracking (letterspacing) */
+  --track-tight:   -0.02em;   /* large display */
+  --track-snug:    -0.01em;   /* headlines */
+  --track-normal:   0;
+  --track-wide:     0.08em;   /* small caps labels */
+  --track-wider:    0.20em;   /* DIGITAL CO descriptor, eyebrow labels */
+  --track-widest:   0.32em;   /* nav, tiny tracked caps */
+
+  --leading-tight:  1.05;
+  --leading-snug:   1.20;
+  --leading-body:   1.50;
+  --leading-loose:  1.75;
+
+  /* -------------------------------------
+     Spacing — 4px base
+     ------------------------------------- */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   24px;
+  --space-6:   32px;
+  --space-7:   48px;
+  --space-8:   64px;
+  --space-9:   96px;
+  --space-10:  128px;
+
+  /* -------------------------------------
+     Radius — lime accent is round; UI is sharp/low-radius
+     ------------------------------------- */
+  --radius-none:  0;
+  --radius-sm:    4px;
+  --radius-md:    6px;     /* default CTA + input radius */
+  --radius-lg:    12px;    /* card radius */
+  --radius-pill:  999px;   /* badges / chips */
+
+  /* -------------------------------------
+     Borders
+     ------------------------------------- */
+  --border-hair:  1px solid var(--border);
+  --border-card:  1px solid var(--border-strong);
+  --border-lime:  1px solid var(--idc-lime);
+
+  /* -------------------------------------
+     Shadow — used sparingly; brand is mostly flat.
+     "Lift" shadow on CTA hover. Lime glow as accent.
+     ------------------------------------- */
+  --shadow-lift:  0 12px 28px -12px rgba(0, 0, 0, 0.65);
+  --shadow-card:  0 1px 0 rgba(255, 255, 255, 0.02) inset, 0 12px 32px -20px rgba(0, 0, 0, 0.8);
+  --shadow-glow:  0 0 0 4px rgba(198, 248, 78, 0.15);
+  --shadow-cta-hover: 0 10px 28px -10px rgba(198, 248, 78, 0.45);
+
+  /* -------------------------------------
+     Motion
+     ------------------------------------- */
+  --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);     /* smooth scroll-in */
+  --ease-snap:    cubic-bezier(0.34, 1.56, 0.64, 1);  /* lime dot overshoot */
+  --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:     160ms;
+  --dur-base:     240ms;
+  --dur-slow:     600ms;
+  --dur-draw:     1200ms;  /* the lime line drawing */
+
+  /* -------------------------------------
+     Brand signature: the fading lime divider line
+     ------------------------------------- */
+  --idc-rule-gradient: linear-gradient(
+    to right,
+    var(--idc-lime) 0%,
+    var(--idc-lime) 70%,
+    rgba(198, 248, 78, 0) 100%
+  );
+}
+
+/* ============================================================
+   Light context override — Brand Kit notes off-white as the
+   light surface. Charcoal becomes the body text color.
+   ============================================================ */
+[data-theme="light"] {
+  --bg:             var(--idc-offwhite);
+  --bg-elevated:    var(--idc-white);
+  --bg-inset:       #ECECEC;
+
+  --border:         #DCDCDC;
+  --border-strong:  #C7C7C7;
+
+  --fg:             var(--idc-charcoal);
+  --fg-muted:       #6E6E6E;
+  --fg-faint:       #9A9A9A;
+}
+
+/* ============================================================
+   Base type — semantic, ready to use
+   ============================================================ */
+html, body {
+  font-family: var(--font-sans);
+  color: var(--fg);
+  background: var(--bg);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.idc-display,
+h1.idc {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: clamp(56px, 9vw, var(--text-6xl));
+  line-height: var(--leading-tight);
+  letter-spacing: var(--track-tight);
+  color: var(--fg);
+  text-wrap: balance;
+}
+
+.idc-headline,
+h2.idc {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: clamp(36px, 5vw, var(--text-4xl));
+  line-height: var(--leading-snug);
+  letter-spacing: var(--track-snug);
+}
+
+.idc-title,
+h3.idc {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semi);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--track-snug);
+}
+
+.idc-subhead,
+h4.idc {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semi);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+}
+
+/* The DIGITAL CO style — tracked caps eyebrow */
+.idc-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+  color: var(--idc-lime);
+}
+
+.idc-label {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-sm);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+
+p.idc,
+.idc-body {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--fg);
+  max-width: 64ch;
+  text-wrap: pretty;
+}
+
+.idc-body-lg {
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+}
+
+.idc-caption,
+small.idc {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+  letter-spacing: var(--track-wide);
+}
+
+.idc-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+/* The brand "wordmark" inline class — same style as logo lockup */
+.idc-wordmark {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--track-snug);
+  text-transform: lowercase;
+}
+.idc-wordmark::after {
+  content: ".";
+  color: var(--idc-lime);
+}
+
+/* The brand "rule" — fading lime line. Drop in anywhere. */
+.idc-rule {
+  display: block;
+  height: 2px;
+  background: var(--idc-rule-gradient);
+  border: 0;
+  width: 100%;
+}
