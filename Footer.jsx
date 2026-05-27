@@ -39,7 +39,7 @@ function Footer({ onNavigate }) {
             <h4 style={{ marginTop: 28 }}>Follow</h4>
             <ul className="social-list">
               <li>
-                <a href="https://instagram.com/immersivedigitalco" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/immersivedigitalwy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <span className="ico" aria-hidden="true">
                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -51,7 +51,7 @@ function Footer({ onNavigate }) {
                 </a>
               </li>
               <li>
-                <a href="https://facebook.com/immersivedigitalco" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61590154077251" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <span className="ico" aria-hidden="true">
                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M14 8h2.5V5H14c-1.93 0-3.5 1.57-3.5 3.5V11H8v3h2.5v7h3v-7H16l.5-3h-3V9c0-.55.45-1 1-1z" fill="currentColor" stroke="none" />
