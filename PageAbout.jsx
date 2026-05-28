@@ -39,7 +39,7 @@ function PageAbout({ onNavigate }) {
 
           <Reveal delay={200}>
             <Tilt max={3}>
-              <PhotoSlot ratio="4 / 5" label="OPERATOR_001 · INCOMING" caption="ARIANNA · LARAMIE · WY · 2026 · HEADSHOT PENDING" />
+              <PhotoSlot ratio="4 / 5" src="arianna-headshot.jpg" alt="Arianna · Founder of Immersive Digital Co" focal="center top" label="OPERATOR_001 · INCOMING" caption="ARIANNA · LARAMIE · WY · 2026" />
             </Tilt>
             <div style={{ marginTop: 18, display: "flex", flexDirection: "column", gap: 10 }}>
               <Credential code="FAA-107" label="FAA Part 107 · Active commercial drone license" />
