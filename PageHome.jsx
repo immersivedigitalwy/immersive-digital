@@ -26,9 +26,6 @@ function PageHome({ onNavigate }) {
             </div>
             <div>
               <SplitText text="web, brand." delay={140} />
-              <span style={{ color: "#C6F84E", marginLeft: "0.4em" }}>
-                <MaskReveal delay={900}>Built solo.</MaskReveal>
-              </span>
             </div>
           </h1>
 
@@ -131,10 +128,8 @@ function PageHome({ onNavigate }) {
         <div className="container" style={{ textAlign: "center" }}>
           <Eyebrow>Positioning · 001</Eyebrow>
           <h2 className="display-l" style={{ marginTop: 28, maxWidth: "22ch", marginInline: "auto", textWrap: "balance" }}>
-            <SplitText text="One operator. Across the stack." />
-            <br />
             <span style={{ color: "#C6F84E" }}>
-              <MaskReveal delay={400}>The work matches because it comes from the same hands.</MaskReveal>
+              <MaskReveal>The work matches because it comes from the same hands.</MaskReveal>
             </span>
           </h2>
         </div>
@@ -176,10 +171,10 @@ function PageHome({ onNavigate }) {
               <div style={{ marginTop: 140 }}>
                 <PhotoSlot
                   ratio="3 / 4"
-                  src="home-web-hero.png"
-                  alt="Recent web build — hero section, custom navigation, dark theme"
+                  src="work-twilight.jpg"
+                  alt="Twilight exterior real estate shoot — warm window glow against a deep blue Wyoming dusk sky"
                   focal="left top"
-                  caption="W_003 · WEB BUILD · BRAND SITE"
+                  caption="W_003 · TWILIGHT · EXTERIOR"
                 />
               </div>
             </Parallax>
