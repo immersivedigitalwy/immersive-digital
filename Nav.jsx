@@ -4,11 +4,11 @@
 
 function Nav({ current, onNavigate }) {
   const links = [
-    { id: "home",     label: "Index",    path: "/" },
+    { id: "home", label: "Index", path: "/" },
     { id: "services", label: "Services", path: "/services" },
-    { id: "work",     label: "Work",     path: "/work" },
-    { id: "about",    label: "About",    path: "/about" },
-    { id: "contact",  label: "Book",     path: "/contact" },
+    { id: "work", label: "Work", path: "/work" },
+    { id: "about", label: "About", path: "/about" },
+    { id: "contact", label: "Book", path: "/contact" },
   ];
 
   // live clock
@@ -21,7 +21,7 @@ function Nav({ current, onNavigate }) {
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
-      padding: "18px 28px",
+      padding: "20px 32px",
       display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24,
       background: "rgba(10,10,10,0.65)",
       backdropFilter: "blur(14px) saturate(180%)",
@@ -29,10 +29,10 @@ function Nav({ current, onNavigate }) {
       borderBottom: "1px solid #1A1A1A",
     }}>
       <a onClick={(e) => { e.preventDefault(); onNavigate("home"); }} href="/" style={{ display: "inline-flex", flexShrink: 0 }}>
-        <Wordmark size={20} withDescriptor={false} />
+        <Wordmark size={26} withDescriptor={false} />
       </a>
 
-      <div style={{ display: "flex", gap: 22, flexShrink: 0 }}>
+      <div style={{ display: "flex", gap: 38, flexShrink: 0 }}>
         {links.map((l) => {
           const active = current === l.id;
           return (
@@ -41,10 +41,10 @@ function Nav({ current, onNavigate }) {
               href={l.path}
               onClick={(e) => { e.preventDefault(); onNavigate(l.id); }}
               style={{
-                position: "relative", padding: "8px 0",
+                position: "relative", padding: "10px 2px",
                 fontFamily: "var(--font-mono, var(--font-sans))",
-                fontSize: 11, fontWeight: 500,
-                letterSpacing: "0.18em", textTransform: "uppercase",
+                fontSize: 15, fontWeight: 700,
+                letterSpacing: "0.10em", textTransform: "uppercase",
                 color: active ? "#C6F84E" : "#fff",
                 transition: "color 200ms", whiteSpace: "nowrap",
               }}
@@ -53,7 +53,7 @@ function Nav({ current, onNavigate }) {
               {active && (
                 <span style={{
                   position: "absolute", left: 0, right: 0, bottom: 0,
-                  height: 1.5, background: "#C6F84E",
+                  height: 2.5, background: "#C6F84E",
                 }} />
               )}
             </a>
@@ -61,16 +61,16 @@ function Nav({ current, onNavigate }) {
         })}
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: 16, flexShrink: 0 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 18, flexShrink: 0 }}>
         <span className="mono nav-clock" style={{
-          fontSize: 11, color: "#888", letterSpacing: "0.14em", whiteSpace: "nowrap",
+          fontSize: 12, color: "#888", letterSpacing: "0.14em", whiteSpace: "nowrap",
         }}>
           <span style={{ color: "#C6F84E" }}>●</span>&nbsp;{time}
         </span>
         <button
           className="btn primary"
           onClick={() => onNavigate("contact")}
-          style={{ padding: "10px 14px", fontSize: 11, letterSpacing: "0.14em" }}
+          style={{ padding: "13px 20px", fontSize: 13, letterSpacing: "0.14em" }}
         >
           Book <span className="arrow">→</span>
         </button>
