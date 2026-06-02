@@ -18,12 +18,12 @@ function Footer({ onNavigate }) {
           <div>
             <h4>Services</h4>
             <ul>
-              <li><a onClick={() => onNavigate("service:drone")} href="/services/drone">Drone aerial</a></li>
-              <li><a onClick={() => onNavigate("service:real-estate")} href="/services/real-estate">Real estate photo</a></li>
-              <li><a onClick={() => onNavigate("service:360")} href="/services/360">360 / Immersive</a></li>
-              <li><a onClick={() => onNavigate("service:brand")} href="/services/brand">Brand · audit + refresh</a></li>
-              <li><a onClick={() => onNavigate("service:web-build")} href="/services/web-build">Web build</a></li>
-              <li><a onClick={() => onNavigate("service:social-plan")} href="/services/social-plan">Social plan</a></li>
+              <li><a onClick={() => onNavigate("service:drone")} href="https://immersive-digital-co.studio.cloudspot.io/scheduling">Drone aerial</a></li>
+              <li><a onClick={() => onNavigate("service:real-estate")} href="https://immersivephotography.hd.pics/order">Real estate photo</a></li>
+              <li><a onClick={() => onNavigate("service:360")} href="https://immersive-digital-co.studio.cloudspot.io/scheduling">360 / Immersive</a></li>
+              <li><a onClick={() => onNavigate("service:brand")} href="https://immersive-digital-co.studio.cloudspot.io/scheduling">Brand · audit + refresh</a></li>
+              <li><a onClick={() => onNavigate("service:web-build")} href="https://immersive-digital-co.studio.cloudspot.io/scheduling">Web build</a></li>
+              <li><a onClick={() => onNavigate("service:social-plan")} href="https://immersive-digital-co.studio.cloudspot.io/scheduling">Social plan</a></li>
             </ul>
           </div>
 
@@ -32,7 +32,7 @@ function Footer({ onNavigate }) {
             <ul>
               <li><a onClick={() => onNavigate("work")} href="/work">Recent work</a></li>
               <li><a onClick={() => onNavigate("about")} href="/about">About Arianna</a></li>
-              <li><a onClick={() => onNavigate("contact")} href="/contact">Book a call</a></li>
+              <li><a onClick={() => onNavigate("contact")} href="https://immersive-digital-co.studio.cloudspot.io/scheduling">Book a call</a></li>
               <li><a href="mailto:immersivedigital.wy@gmail.com">Email</a></li>
               <li><a href="tel:+13077613160">307-761-3160</a></li>
             </ul>
