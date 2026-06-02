@@ -151,7 +151,7 @@ function PageHome({ onNavigate }) {
             <Btn variant="bracket" onClick={() => onNavigate("work")}>See archive</Btn>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr 0.9fr", gap: 16, alignItems: "start" }}>
+          <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr 0.9fr", gap: 16, alignItems: "start" }}>
             <Parallax speed={0.08}>
               <PhotoSlot
                 ratio="3 / 5"
@@ -240,7 +240,7 @@ function PageHome({ onNavigate }) {
             <SplitText text="five vendors who never talk." delay={400} />
           </h3>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56 }}>
+          <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56 }}>
             <Reveal>
               <div className="panel" style={{ background: "transparent", padding: "0 0 0 0", border: 0 }}>
                 <Eyebrow>The old way</Eyebrow>
