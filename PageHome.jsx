@@ -163,12 +163,12 @@ function PageHome({ onNavigate }) {
                   ratio="4 / 5"
                   src="home-drone-hero.jpg"
                   alt="Aerial of the Laramie River winding through autumn cottonwoods — Wyoming, Albany County"
-                  caption="W_002 · DRONE · AERIAL SURVEY"
+                  caption="W_002 · DRONE"
                 />
               </div>
             </Parallax>
             <Parallax speed={0.04}>
-              <div style={{ marginTop: 140 }}>
+              <div style={{ marginTop: 60 }}>
                 <PhotoSlot
                   ratio="3 / 4"
                   src="work-twilight.jpg"
