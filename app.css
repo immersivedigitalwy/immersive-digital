@@ -571,7 +571,7 @@ section { position: relative; }
 }
 .footer .gigantic {
   font-weight: 700;
-  font-size: clamp(80px, 16vw, 280px);
+  font-size: clamp(40px, 13vw, 280px);
   line-height: 0.86;
   letter-spacing: -0.04em;
   color: transparent;
