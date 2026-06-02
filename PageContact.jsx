@@ -52,7 +52,7 @@ function PageContact({ onNavigate }) {
                   <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
                     <div className="field">
                       <label>01 · Name</label>
-                      <input value={form.name} onChange={update("name")} placeholder="Arianna" />
+                      <input value={form.name} onChange={update("name")} placeholder="Your name" />
                     </div>
                     <div className="field">
                       <label>02 · Email</label>
