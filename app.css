@@ -712,3 +712,12 @@ html, body { overflow-x: hidden; }
   /* extra-small phones: ensure flex rows of buttons can wrap */
   .btn-row, .actions-row { flex-wrap: wrap; }
 }
+
+@media (max-width: 900px) {
+  /* two-up grid on phones (e.g. stat rows) */
+  .auto-stack-2 { grid-template-columns: 1fr 1fr !important; }
+  /* when a grid collapses, children must not keep explicit column spans */
+  .auto-stack > *, .work-grid > * { grid-column: auto !important; }
+  /* work archive: reset staggered top margins so cards stack cleanly */
+  .work-grid > * { margin-top: 0 !important; }
+}
