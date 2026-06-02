@@ -21,7 +21,7 @@ function Nav({ current, onNavigate }) {
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
-      padding: "20px 32px",
+      padding: "24px 32px",
       display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24,
       background: "rgba(10,10,10,0.65)",
       backdropFilter: "blur(14px) saturate(180%)",
@@ -29,10 +29,10 @@ function Nav({ current, onNavigate }) {
       borderBottom: "1px solid #1A1A1A",
     }}>
       <a onClick={(e) => { e.preventDefault(); onNavigate("home"); }} href="/" style={{ display: "inline-flex", flexShrink: 0 }}>
-        <Wordmark size={26} withDescriptor={false} />
+        <Wordmark size={32} withDescriptor={false} />
       </a>
 
-      <div style={{ display: "flex", gap: 38, flexShrink: 0 }}>
+      <div style={{ display: "flex", gap: 44, flexShrink: 0 }}>
         {links.map((l) => {
           const active = current === l.id;
           return (
@@ -43,8 +43,8 @@ function Nav({ current, onNavigate }) {
               style={{
                 position: "relative", padding: "10px 2px",
                 fontFamily: "var(--font-mono, var(--font-sans))",
-                fontSize: 15, fontWeight: 700,
-                letterSpacing: "0.10em", textTransform: "uppercase",
+                fontSize: 18, fontWeight: 700,
+                letterSpacing: "0.08em", textTransform: "uppercase",
                 color: active ? "#C6F84E" : "#fff",
                 transition: "color 200ms", whiteSpace: "nowrap",
               }}
@@ -53,7 +53,7 @@ function Nav({ current, onNavigate }) {
               {active && (
                 <span style={{
                   position: "absolute", left: 0, right: 0, bottom: 0,
-                  height: 2.5, background: "#C6F84E",
+                  height: 3, background: "#C6F84E",
                 }} />
               )}
             </a>
@@ -63,14 +63,14 @@ function Nav({ current, onNavigate }) {
 
       <div style={{ display: "flex", alignItems: "center", gap: 18, flexShrink: 0 }}>
         <span className="mono nav-clock" style={{
-          fontSize: 12, color: "#888", letterSpacing: "0.14em", whiteSpace: "nowrap",
+          fontSize: 13, color: "#888", letterSpacing: "0.14em", whiteSpace: "nowrap",
         }}>
           <span style={{ color: "#C6F84E" }}>●</span>&nbsp;{time}
         </span>
         <button
           className="btn primary"
           onClick={() => onNavigate("contact")}
-          style={{ padding: "13px 20px", fontSize: 13, letterSpacing: "0.14em" }}
+          style={{ padding: "15px 24px", fontSize: 15, letterSpacing: "0.14em" }}
         >
           Book <span className="arrow">→</span>
         </button>
