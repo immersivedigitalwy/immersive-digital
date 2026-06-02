@@ -78,7 +78,7 @@ function PageWork({ onNavigate }) {
             </div>
           </Reveal>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: 18 }}>
+          <div className="work-grid auto-stack" style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: 18 }}>
             {filtered.map((w, i) => {
               const spans = [7, 5, 4, 4, 4, 6, 6, 4];
               const span = spans[i % spans.length];
