@@ -44,7 +44,7 @@ function PageServiceDetail({ slug, onNavigate }) {
             <Coords label={`Service / ${svc.num}`} />
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 64, alignItems: "end", marginTop: 36 }}>
+          <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 64, alignItems: "end", marginTop: 36 }}>
             <h1 className="display-xl" style={{ maxWidth: "14ch", lineHeight: 0.92 }}>
               <SplitText text={svc.label + "."} />
             </h1>
@@ -67,7 +67,7 @@ function PageServiceDetail({ slug, onNavigate }) {
 
       {/* TITLE / BIG STATEMENT */}
       <section style={{ padding: "120px 0" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: 80 }}>
+        <div className="container auto-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: 80 }}>
           <div>
             <Reveal>
               <Eyebrow>{svc.num} · Overview</Eyebrow>
@@ -97,7 +97,7 @@ function PageServiceDetail({ slug, onNavigate }) {
             <span className="mono" style={{ color: "#888", fontSize: 11, letterSpacing: "0.18em" }}>{svc.deliverables.length} · variants</span>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 18 }}>
+          <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 18 }}>
             {svc.deliverables.map((d, i) => (
               <Reveal key={d.name} delay={i * 80}>
                 <Tilt max={3}>
@@ -128,7 +128,7 @@ function PageServiceDetail({ slug, onNavigate }) {
             <SplitText text="How it runs." />
           </h2>
 
-          <div style={{ position: "relative", display: "grid", gridTemplateColumns: `repeat(${svc.process.length}, 1fr)`, gap: 24 }}>
+          <div className="auto-stack" style={{ position: "relative", display: "grid", gridTemplateColumns: `repeat(${svc.process.length}, 1fr)`, gap: 24 }}>
             <div style={{
               position: "absolute", top: 24, left: "4%", right: "4%",
               height: 1.5, background: "linear-gradient(to right, #C6F84E 0%, #C6F84E 80%, transparent 100%)",
@@ -170,7 +170,7 @@ function PageServiceDetail({ slug, onNavigate }) {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: `repeat(${svc.pricing.length}, 1fr)`, gap: 18 }}>
+          <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: `repeat(${svc.pricing.length}, 1fr)`, gap: 18 }}>
             {svc.pricing.map((p, i) => (
               <Reveal key={p.tier} delay={i * 120}>
                 <PriceCard plan={p} onBook={() => onNavigate("contact")} />
@@ -183,7 +183,7 @@ function PageServiceDetail({ slug, onNavigate }) {
       {/* FAQ */}
       {svc.faq && svc.faq.length > 0 && (
         <section style={{ padding: "120px 0", borderTop: "1px solid #1A1A1A" }}>
-          <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80 }}>
+          <div className="container auto-stack" style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80 }}>
             <div>
               <Reveal>
                 <Eyebrow>FAQ</Eyebrow>
@@ -224,7 +224,7 @@ function PageServiceDetail({ slug, onNavigate }) {
           <div className="rule" style={{ marginTop: 80, marginBottom: 32 }}></div>
 
           {/* Related services */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+          <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
             <RelatedCard svc={prev} label="Previous service" onNavigate={onNavigate} />
             <RelatedCard svc={next} label="Next service" onNavigate={onNavigate} flip />
           </div>
