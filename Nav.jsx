@@ -18,6 +18,14 @@ function Nav({ current, onNavigate }) {
     return () => clearInterval(t);
   }, []);
 
+  // mobile menu
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const go = (id) => { setMenuOpen(false); onNavigate(id); };
+  React.useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
@@ -28,11 +36,11 @@ function Nav({ current, onNavigate }) {
       WebkitBackdropFilter: "blur(14px) saturate(180%)",
       borderBottom: "1px solid #1A1A1A",
     }}>
-      <a onClick={(e) => { e.preventDefault(); onNavigate("home"); }} href="/" style={{ display: "inline-flex", flexShrink: 0 }}>
+      <a onClick={(e) => { e.preventDefault(); go("home"); }} href="/" style={{ display: "inline-flex", flexShrink: 0 }}>
         <Wordmark size={32} withDescriptor={false} />
       </a>
 
-      <div style={{ display: "flex", gap: 44, flexShrink: 0 }}>
+      <div className="nav-desktop" style={{ display: "flex", gap: 44, flexShrink: 0 }}>
         {links.map((l) => {
           const active = current === l.id;
           return (
@@ -61,7 +69,7 @@ function Nav({ current, onNavigate }) {
         })}
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: 18, flexShrink: 0 }}>
+      <div className="nav-actions" style={{ display: "flex", alignItems: "center", gap: 18, flexShrink: 0 }}>
         <span className="mono nav-clock" style={{
           fontSize: 13, color: "#888", letterSpacing: "0.14em", whiteSpace: "nowrap",
         }}>
@@ -74,6 +82,44 @@ function Nav({ current, onNavigate }) {
         >
           Book <span className="arrow">→</span>
         </button>
+      </div>
+
+      <button
+        className="nav-burger"
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen}
+        onClick={() => setMenuOpen((o) => !o)}
+      >
+        <span className={"nav-burger-box" + (menuOpen ? " is-open" : "")}>
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+      <div className={"nav-mobile-menu" + (menuOpen ? " is-open" : "")}>
+        <div className="nav-mobile-links">
+          {links.map((l, i) => {
+            const active = current === l.id;
+            return (
+              <a
+                key={l.id}
+                href={l.path}
+                onClick={(e) => { e.preventDefault(); go(l.id); }}
+                style={{ color: active ? "#C6F84E" : "#fff" }}
+              >
+                <span className="nav-mobile-index">{String(i + 1).padStart(2, "0")}</span>
+                {l.label}
+              </a>
+            );
+          })}
+        </div>
+        <div className="nav-mobile-foot">
+          <span className="mono" style={{ fontSize: 13, color: "#888", letterSpacing: "0.14em" }}>
+            <span style={{ color: "#C6F84E" }}>●</span>&nbsp;{time}
+          </span>
+          <button className="btn primary" onClick={() => go("contact")} style={{ padding: "15px 24px", fontSize: 15, letterSpacing: "0.14em" }}>
+            Book <span className="arrow">→</span>
+          </button>
+        </div>
       </div>
     </nav>
   );
