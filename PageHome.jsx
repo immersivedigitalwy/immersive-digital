@@ -132,7 +132,7 @@ function PageHome({ onNavigate }) {
               <span style={{ color: "#fff" }}>The work</span>
               <span style={{ color: "#C6F84E" }}> matches, </span>
               <span style={{ color: "#fff" }}>because it comes from the </span>
-              <span style={{ color: "#C6F84E" }}>same hands</span>
+              <span style={{ color: "#C6F84E" }}>same hands.</span>
             </MaskReveal>
           </h2>
         </div>
