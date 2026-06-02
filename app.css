@@ -737,3 +737,17 @@ html, body { overflow-x: hidden; }
   .display-l  { font-size: 26px; }
   .display-m  { font-size: 23px; }
 }
+
+
+/* ------------------------------------------------------------
+Mobile fixes — footer legal row + CTA button clipping
+------------------------------------------------------------ */
+@media (max-width: 768px) {
+   .footer .end {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+   }
+   .footer .end > div { display: flex; flex-wrap: wrap; gap: 14px 22px; }
+   .btn.primary { white-space: normal; text-align: center; max-width: 100%; }
+}
