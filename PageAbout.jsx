@@ -18,7 +18,7 @@ function PageAbout({ onNavigate }) {
       </section>
 
       <section style={{ padding: "96px 0", borderTop: "1px solid #1A1A1A" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 80, alignItems: "start" }}>
+        <div className="container auto-stack" style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 80, alignItems: "start" }}>
           <Reveal>
             <p style={{ fontSize: 22, lineHeight: 1.55, color: "#fff", maxWidth: "44ch", marginTop: 0, fontWeight: 500, letterSpacing: "-0.005em" }}>
               I'm Arianna. I run Immersive Digital Co out of Laramie, Wyoming.
@@ -59,7 +59,7 @@ function PageAbout({ onNavigate }) {
             <SplitText text="The operating system." />
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, position: "relative" }}>
+          <div className="auto-stack-2" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, position: "relative" }}>
             <div style={{
               position: "absolute", top: 24, left: "4%", right: "4%",
               height: 1,
@@ -101,7 +101,7 @@ function PageAbout({ onNavigate }) {
             <SplitText text="What clients say." />
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+          <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
             <Reveal>
               <Quote
                 text="She made our listing photos look like a magazine spread. Sold in 6 days."
