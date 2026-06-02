@@ -37,7 +37,7 @@ window.SERVICES_DATA = [
     ],
     price: "From $225 per session",
     coord: "ALT · 400 ft AGL",
-    icon: "02_drone.png",
+    icon: "icon-drone.png",
     faq: [
       ["Are you Part 107 licensed?", "Yes. Current FAA Part 107 commercial drone certificate. $1M liability cert provided on request for any commercial client."],
       ["What about LAANC airspace?",  "I file LAANC authorizations myself for any controlled airspace in Albany County."],
@@ -84,7 +84,7 @@ window.SERVICES_DATA = [
     ],
     price: "Essentials from $195",
     coord: "EXP · 1/125 · f/8 · ISO 400",
-    icon: "01_listings.png",
+    icon: "icon-real-estate.png",
     faq: [
       ["How does sqft pricing work?", "Five tiers: Spark (≤2,500), Pulse (2.5–3.5k), Beacon (3.5–4.5k), Spotlight (4.5–5.5k), Apex (5,500+). Apex is quoted individually. Prices shown are starting from Spark."],
       ["What's the turnaround?",      "24 hours for photos, every tier. 7 days for Cinema Walkthrough video. 48–72 hr for Matterport. No rush fee available — editing is outsourced, turnaround is fixed."],
@@ -131,7 +131,7 @@ window.SERVICES_DATA = [
     ],
     price: "From $225 per scan",
     coord: "POI · 360.00°",
-    icon: "03_before_after.png",
+    icon: "icon-360.png",
     faq: [
       ["Matterport vs Google 360 — which one do I need?", "Matterport is for residential listings: buyers tour from anywhere, embedded on MLS/IDX. Google Street View Trusted is for commercial storefronts: lives on Google Maps forever, big local SEO lift, no recurring hosting."],
       ["What hardware do you use?", "Matterport-grade 360 rig for residential. Google-certified workflow for Street View Trusted scans on commercial."],
@@ -182,7 +182,7 @@ window.SERVICES_DATA = [
     ],
     price: "Audit · Free",
     coord: "SCAN + REFRESH + BUILD",
-    icon: "07_tips.png",
+    icon: "icon-brand.png",
     faq: [
       ["I just need an audit, not a redesign.",      "Perfect. The audit is free. PDF fix list, no upsell. Hire someone else for the fixes — I won't follow up."],
       ["My logo is fine, but my brand is messy.",     "That's the refresh tier. We keep what works (the mark), fix what doesn't (colors, type, voice consistency)."],
@@ -227,7 +227,7 @@ window.SERVICES_DATA = [
     ],
     price: "From $600 flat",
     coord: "PERF · LH 95+",
-    icon: "06_about.png",
+    icon: "icon-web-build.png",
     faq: [
       ["Where does the site live?",       "Framer, Webflow, or a static host. You pick — domain stays in your account."],
       ["Can I update it myself?",          "Yes. Every build hands off with editable CMS access. I leave a loom walkthrough."],
@@ -272,7 +272,7 @@ window.SERVICES_DATA = [
     ],
     price: "From $175 / month",
     coord: "CAL · 30 / 30",
-    icon: "08_booking.png",
+    icon: "icon-social-plan.png",
     faq: [
       ["Do you post for me?",            "The base plan is strategy only — you hit post. Upgrade to Plan + Content if you want me to also produce + schedule."],
       ["Which platforms?",                "Instagram, Facebook, LinkedIn, TikTok, Google Business. I'll recommend a focused 2-platform mix based on your verticals."],
