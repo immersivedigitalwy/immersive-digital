@@ -127,10 +127,13 @@ function PageHome({ onNavigate }) {
         <div className="grid-bg" style={{ opacity: 0.3 }}></div>
         <div className="container" style={{ textAlign: "center" }}>
           <Eyebrow>Positioning · 001</Eyebrow>
-          <h2 className="display-l" style={{ marginTop: 28, maxWidth: "22ch", marginInline: "auto", textWrap: "balance" }}>
-            <span style={{ color: "#C6F84E" }}>
-              <MaskReveal>The work matches because it comes from the same hands.</MaskReveal>
-            </span>
+          <h2 className="display-l" style={{ marginTop: 28, maxWidth: "26ch", marginInline: "auto", textWrap: "balance" }}>
+            <MaskReveal>
+              <span style={{ color: "#fff" }}>The work</span>
+              <span style={{ color: "#C6F84E" }}> matches, </span>
+              <span style={{ color: "#fff" }}>because it comes from the </span>
+              <span style={{ color: "#C6F84E" }}>same hands</span>
+            </MaskReveal>
           </h2>
         </div>
       </section>
@@ -168,7 +171,7 @@ function PageHome({ onNavigate }) {
               </div>
             </Parallax>
             <Parallax speed={0.04}>
-              <div style={{ marginTop: 60 }}>
+              <div style={{ marginTop: 200 }}>
                 <PhotoSlot
                   ratio="3 / 4"
                   src="work-twilight.jpg"
