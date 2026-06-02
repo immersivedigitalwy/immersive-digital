@@ -684,3 +684,31 @@ section { position: relative; }
     gap: 18px; margin-top: 32px;
   }
 }
+
+/* ------------------------------------------------------------
+   Mobile friendliness — prevent horizontal overflow, stack
+   multi-column grids, wrap long strings. Desktop (>900px)
+   is unaffected.
+------------------------------------------------------------ */
+html, body { overflow-x: hidden; }
+* { min-width: 0; }
+
+/* long unbreakable strings (emails, urls) must wrap, never push width */
+.btn.ghost, a[href^="mailto:"] { overflow-wrap: anywhere; word-break: break-word; }
+
+@media (max-width: 900px) {
+  /* utility: collapse any multi-column grid to a single column */
+  .auto-stack { grid-template-columns: 1fr !important; }
+
+  /* keep long contact/email buttons from overflowing the row */
+  .btn { max-width: 100%; }
+  .btn.ghost { white-space: normal; text-align: center; }
+
+  /* tighten oversized vertical section padding on phones */
+  section { padding-left: 0; padding-right: 0; }
+}
+
+@media (max-width: 560px) {
+  /* extra-small phones: ensure flex rows of buttons can wrap */
+  .btn-row, .actions-row { flex-wrap: wrap; }
+}
