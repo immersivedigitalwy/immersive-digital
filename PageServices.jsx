@@ -47,7 +47,7 @@ function PageServices({ onNavigate }) {
 function ServiceBlock({ svc, flip, onNavigate }) {
   return (
     <section style={{ padding: "120px 0", borderTop: "1px solid #1A1A1A", position: "relative", overflow: "hidden" }}>
-      <div className="container" style={{
+      <div className="container auto-stack" style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         gap: 80, alignItems: "center",
@@ -69,7 +69,7 @@ function ServiceBlock({ svc, flip, onNavigate }) {
               {svc.body}
             </p>
 
-            <ul style={{ listStyle: "none", padding: 0, margin: "36px 0 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px 24px" }}>
+            <ul className="auto-stack" style={{ listStyle: "none", padding: 0, margin: "36px 0 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px 24px" }}>
               {svc.bullets.map(b => (
                 <li key={b} style={{ display: "flex", alignItems: "baseline", gap: 12, color: "#fff", fontSize: 14 }}>
                   <LimeDot size={5} style={{ flexShrink: 0, marginTop: 2 }} /> <span>{b}</span>
