@@ -1,9 +1,11 @@
 /* eslint-disable */
-function PageContact({ onNavigate }) {
-  const [sent, setSent] = React.useState(false);
-  const [form, setForm] = React.useState({ name: "", email: "", project: "Drone aerial", message: "" });
-  const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+// Booking page. Routes each project to the right portal:
+//   Real estate  -> HD Photo Hub order page
+//   Everything else -> CloudSpot scheduling
+const HD_BOOKING_URL = "https://immersivephotography.hd.pics/order";
+const CLOUDSPOT_BOOKING_URL = "https://immersive-digital-co.studio.cloudspot.io/scheduling";
 
+function PageContact({ onNavigate }) {
   return (
     <main data-screen-label="05 Book">
       <section className="page-hero">
@@ -14,7 +16,7 @@ function PageContact({ onNavigate }) {
             <SplitText text="Book a call." />
           </h1>
           <p style={{ color: "#888", fontSize: 18, marginTop: 24, maxWidth: "52ch", lineHeight: 1.55 }}>
-            Send me the project. I'll quote a flat fee in the intro call.
+            Pick your project and I'll send you straight to the right booking page.
             No upsell, no hourly creep, no template proposal deck.
           </p>
           <Coords label="Engagement form" />
@@ -24,96 +26,61 @@ function PageContact({ onNavigate }) {
       <section style={{ padding: "72px 0 120px", borderTop: "1px solid #1A1A1A" }}>
         <div className="container auto-stack" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: 80, alignItems: "start" }}>
 
-          {/* FORM */}
-          <div>
-            {sent ? (
-              <Reveal>
-                <div className="book-block" style={{ padding: 56 }}>
-                  <Eyebrow>Received · 200 OK</Eyebrow>
-                  <h2 className="display-m" style={{ marginTop: 18 }}>
-                    I'll reply within 24 hours.
-                  </h2>
-                  <p style={{ color: "#888", fontSize: 15, lineHeight: 1.7, marginTop: 18, maxWidth: "48ch" }}>
-                    If it's urgent — a listing closing this week, an active job site, an event in 7 days —
-                    reply "URGENT" to the confirmation email and I'll triage faster.
-                  </p>
-                  <div style={{ marginTop: 28, display: "flex", gap: 12 }}>
-                    <button className="btn ghost" onClick={() => { setSent(false); onNavigate("home"); }}>
-                      Back to index <span className="arrow">→</span>
-                    </button>
-                  </div>
+          {/* BOOKING PATHS */}
+          <div style={{ display: "grid", gap: 28 }}>
+            <Reveal>
+              <div className="book-block" style={{ padding: 40 }}>
+                <Eyebrow>Real estate</Eyebrow>
+                <h2 className="display-m" style={{ marginTop: 16 }}>
+                  Listing media. Drone included. 24 hour turnaround.
+                </h2>
+                <p style={{ color: "#888", fontSize: 15, lineHeight: 1.7, marginTop: 16, maxWidth: "48ch" }}>
+                  Photo, video, Matterport, and floor plans for agents and brokers.
+                  Book the shoot and pick your package on HD Photo Hub.
+                </p>
+                <div style={{ marginTop: 26 }}>
+                  <a className="btn primary" href={HD_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                    Book a real estate shoot <span className="arrow">→</span>
+                  </a>
                 </div>
-              </Reveal>
-            ) : (
-              <Reveal>
-                <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} style={{
-                  display: "grid", gap: 32,
-                }}>
-                  <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
-                    <div className="field">
-                      <label>01 · Name</label>
-                      <input value={form.name} onChange={update("name")} placeholder="Your name" />
-                    </div>
-                    <div className="field">
-                      <label>02 · Email</label>
-                      <input type="email" value={form.email} onChange={update("email")} placeholder="you@example.com" />
-                    </div>
-                  </div>
+              </div>
+            </Reveal>
 
-                  <div className="field">
-                    <label>03 · Project type</label>
-                    <select value={form.project} onChange={update("project")}>
-                      <option>Drone aerial</option>
-                      <option>Real estate shoot</option>
-                      <option>360 / Immersive walkthrough</option>
-                      <option>Brand audit</option>
-                      <option>Logo refresh</option>
-                      <option>New logo / brand build</option>
-                      <option>Full brand kit</option>
-                      <option>Web build</option>
-                      <option>Social plan</option>
-                      <option>Not sure / mix of services</option>
-                    </select>
-                  </div>
-
-                  <div className="field">
-                    <label>04 · Tell me about the project</label>
-                    <textarea
-                      value={form.message} onChange={update("message")}
-                      placeholder="Address, scope, when you need files back, any constraints..."
-                      rows={5}
-                    />
-                  </div>
-
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 14, gap: 24, flexWrap: "wrap" }}>
-                    <span className="mono" style={{ color: "#888", fontSize: 11, letterSpacing: "0.18em" }}>
-                      ⤷ I reply within 24 hours.
-                    </span>
-                    <MagneticButton type="submit" className="btn primary">
-                      Send the project <span className="arrow">→</span>
-                    </MagneticButton>
-                  </div>
-                </form>
-              </Reveal>
-            )}
+            <Reveal delay={120}>
+              <div className="book-block" style={{ padding: 40 }}>
+                <Eyebrow>Everything else</Eyebrow>
+                <h2 className="display-m" style={{ marginTop: 16 }}>
+                  Drone, 360, brand, web, social, or a consult.
+                </h2>
+                <p style={{ color: "#888", fontSize: 15, lineHeight: 1.7, marginTop: 16, maxWidth: "48ch" }}>
+                  Aerial work, virtual tours, brand and web projects, social plans, or just a
+                  30 minute call to scope it out. Grab a time on CloudSpot.
+                </p>
+                <div style={{ marginTop: 26 }}>
+                  <a className="btn primary" href={CLOUDSPOT_BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                    Book on CloudSpot <span className="arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </Reveal>
           </div>
 
           {/* SIDEBAR */}
           <Reveal delay={200}>
             <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-              <SidebarItem label="Email"      value="immersivedigital.wy@gmail.com" />
-              <SidebarItem label="Phone"      value="307-761-3160" />
-              <SidebarItem label="Location"   value="Laramie, WY · Albany County" />
-              <SidebarItem label="Coverage"   value="Front Range · S. Wyoming · N. Colorado" />
-              <SidebarItem label="Licenses"   value="FAA Part 107 · Realtor® · Active" />
+              <SidebarItem label="Email" value="immersivedigital.wy@gmail.com" />
+              <SidebarItem label="Phone" value="307-761-3160" />
+              <SidebarItem label="Location" value="Laramie, WY · Albany County" />
+              <SidebarItem label="Coverage" value="Front Range · S. Wyoming · N. Colorado" />
+              <SidebarItem label="Licenses" value="FAA Part 107 · Realtor® · Active" />
               <SidebarItem label="Turnaround" value="24 hr photo · 48 hr drone · 14 day web" />
-              <SidebarItem label="Booking"    value="Open · June 2026" lime />
+              <SidebarItem label="Booking" value="Open · June 2026" lime />
             </div>
 
             <div className="book-block" style={{ padding: 28, marginTop: 32 }}>
               <Eyebrow>Direct line</Eyebrow>
               <h3 style={{ fontWeight: 700, fontSize: 22, letterSpacing: "-0.01em", marginTop: 14, lineHeight: 1.2 }}>
-                Skip the form. Send me your URL —
+                Prefer email? Send me your URL —
                 <br />
                 I'll send the audit back same week.
               </h3>
