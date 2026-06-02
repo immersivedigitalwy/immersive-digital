@@ -171,12 +171,12 @@ function PageHome({ onNavigate }) {
               </div>
             </Parallax>
             <Parallax speed={0.04}>
-              <div style={{ marginTop: 200 }}>
+              <div>
                 <PhotoSlot
-                  ratio="3 / 4"
+                  ratio="4 / 5"
                   src="work-twilight.jpg"
                   alt="Twilight exterior real estate shoot — warm window glow against a deep blue Wyoming dusk sky"
-                  focal="left top"
+                  focal="center"
                   caption="W_003 · TWILIGHT · EXTERIOR"
                 />
               </div>
