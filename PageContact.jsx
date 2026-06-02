@@ -22,7 +22,7 @@ function PageContact({ onNavigate }) {
       </section>
 
       <section style={{ padding: "72px 0 120px", borderTop: "1px solid #1A1A1A" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: 80, alignItems: "start" }}>
+        <div className="container auto-stack" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: 80, alignItems: "start" }}>
 
           {/* FORM */}
           <div>
@@ -49,7 +49,7 @@ function PageContact({ onNavigate }) {
                 <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} style={{
                   display: "grid", gap: 32,
                 }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+                  <div className="auto-stack" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
                     <div className="field">
                       <label>01 · Name</label>
                       <input value={form.name} onChange={update("name")} placeholder="Arianna" />
