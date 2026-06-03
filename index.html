@@ -29,6 +29,62 @@
   <script type="text/babel" src="PageAbout.jsx"></script>
   <script type="text/babel" src="PageContact.jsx"></script>
   <script type="text/babel" src="App.jsx"></script>
-  <img src="https://tracker.metricool.com/c3po.jpg?hash=ec4347fd478601641fb8d9c769aca2"/>
+
+  <!-- ===== Cookie consent + gated Metricool analytics ===== -->
+  <style>
+    #idc-consent{position:fixed;left:24px;right:24px;bottom:24px;z-index:9999;max-width:560px;margin:0 auto;
+      background:#0A0A0A;color:#FFFFFF;border:1px solid #3D3D3D;border-radius:12px;
+      padding:20px 24px;font-family:"Poppins","Inter",system-ui,-apple-system,sans-serif;
+      box-shadow:0 12px 40px rgba(0,0,0,0.6);display:none}
+    #idc-consent.show{display:block}
+    #idc-consent h4{margin:0 0 8px;font-size:13px;font-weight:600;letter-spacing:0.20em;
+      text-transform:uppercase;color:#C6F84E}
+    #idc-consent p{margin:0 0 16px;font-size:13px;line-height:1.5;color:#888888}
+    #idc-consent .idc-actions{display:flex;gap:12px;flex-wrap:wrap}
+    #idc-consent button{font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;
+      border-radius:6px;padding:10px 22px;border:1px solid #3D3D3D;transition:background .15s,color .15s}
+    #idc-consent .idc-accept{background:#C6F84E;color:#0A0A0A;border-color:#C6F84E}
+    #idc-consent .idc-accept:hover{background:#A8DA32;border-color:#A8DA32}
+    #idc-consent .idc-decline{background:transparent;color:#FFFFFF}
+    #idc-consent .idc-decline:hover{background:#1A1A1A}
+  </style>
+  <div id="idc-consent" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <h4>Cookies</h4>
+    <p>We use analytics cookies to understand how visitors use this site. Nothing loads until you choose.</p>
+    <div class="idc-actions">
+      <button class="idc-accept" type="button">Accept</button>
+      <button class="idc-decline" type="button">Decline</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var KEY = "idc-consent";
+      var banner = document.getElementById("idc-consent");
+      function loadTracker(){
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "https://tracker.metricool.com/resources/be.js";
+        s.onload = s.onreadystatechange = function(){
+          if (window.beTracker) beTracker.t({ hash: "ec4347fd478601641fb8d9c769aca2" });
+        };
+        document.getElementsByTagName("head")[0].appendChild(s);
+      }
+      function hide(){ banner.classList.remove("show"); }
+      try {
+        var choice = localStorage.getItem(KEY);
+        if (choice === "accepted") { loadTracker(); }
+        else if (choice !== "declined") { banner.classList.add("show"); }
+      } catch(e) { banner.classList.add("show"); }
+      banner.querySelector(".idc-accept").addEventListener("click", function(){
+        try { localStorage.setItem(KEY, "accepted"); } catch(e){}
+        hide(); loadTracker();
+      });
+      banner.querySelector(".idc-decline").addEventListener("click", function(){
+        try { localStorage.setItem(KEY, "declined"); } catch(e){}
+        hide();
+      });
+    })();
+  </script>
+  <!-- ===== end consent ===== -->
 </body>
 </html>
