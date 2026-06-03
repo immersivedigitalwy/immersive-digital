@@ -99,7 +99,9 @@ function Footer({ onNavigate }) {
         <div className="end">
           <div>© 2026 IMMERSIVE DIGITAL CO · BUILT IN WYOMING</div>
           <div style={{ display: "flex", gap: 22 }}>
-            <a>PRIVACY</a><a>TERMS</a><a>SITEMAP</a>
+            <a onClick={() => onNavigate("privacy")} href="/privacy" style={{ cursor: "pointer" }}>PRIVACY</a>
+            <a onClick={() => onNavigate("terms")} href="/terms" style={{ cursor: "pointer" }}>TERMS</a>
+            <a>SITEMAP</a>
           </div>
         </div>
       </div>
