@@ -1,9 +1,36 @@
 /* eslint-disable */
 // Router with full-screen lime wipe transition between pages.
+// URL-synced: deep links, refresh, and browser back/forward all work.
 // Supports a special route format "service:<slug>" for detail pages.
 
+const ROUTES = {
+  home: "/",
+  services: "/services",
+  work: "/work",
+  about: "/about",
+  contact: "/contact",
+};
+
+function pageToPath(page) {
+  if (typeof page === "string" && page.startsWith("service:")) {
+    return "/services/" + page.slice("service:".length);
+  }
+  return ROUTES[page] || "/";
+}
+
+function pathToPage(path) {
+  const p = (path || "/").replace(/\/+$/, "") || "/";
+  if (p === "/") return "home";
+  const m = p.match(/^\/services\/([^\/]+)$/);
+  if (m) return "service:" + m[1];
+  for (const key in ROUTES) {
+    if (ROUTES[key] === p) return key;
+  }
+  return "home";
+}
+
 function App() {
-  const [page, setPage] = React.useState("home");
+  const [page, setPage] = React.useState(() => pathToPage(window.location.pathname));
   const [wiping, setWiping] = React.useState(false);
 
   const navigate = (target) => {
@@ -11,10 +38,21 @@ function App() {
     setWiping(true);
     setTimeout(() => {
       setPage(target);
+      const path = pageToPath(target);
+      if (window.location.pathname !== path) {
+        window.history.pushState({ page: target }, "", path);
+      }
       window.scrollTo({ top: 0, behavior: "instant" });
     }, 600);
     setTimeout(() => setWiping(false), 1300);
   };
+
+  // Browser back/forward buttons
+  React.useEffect(() => {
+    const onPop = () => setPage(pathToPage(window.location.pathname));
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   // Resolve which page component to render
   let PageEl = null;
@@ -25,11 +63,11 @@ function App() {
     pageProps.slug = page.slice("service:".length);
   } else {
     const map = {
-      home:     PageHome,
+      home: PageHome,
       services: PageServices,
-      work:     PageWork,
-      about:    PageAbout,
-      contact:  PageContact,
+      work: PageWork,
+      about: PageAbout,
+      contact: PageContact,
     };
     PageEl = map[page] || PageHome;
   }
