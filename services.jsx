@@ -10,7 +10,7 @@ window.SERVICES_DATA = [
     tag: "FAA · PART 107",
     title: "Aerial proof of work. Weekly cadence available.",
     intro: "Aerial work for businesses that need visual proof their job is on schedule, their land is mapped, their venue looks good from 400 feet up. Part 107 licensed for commercial use across Wyoming.",
-    body: "Construction progress, real estate, events, turism. Edited 4K stills and clips back inside 48 hours. Files staged for MLS, broker socials, project pages, or dispute documentation.",
+    body: "Construction progress, real estate, events, tourism. Edited 4K stills and clips back inside 48 hours. Files staged for MLS, broker socials, project pages, or dispute documentation.",
     bullets: [
       "Real estate exteriors + aerials",
       "Construction weekly progress shoots",
