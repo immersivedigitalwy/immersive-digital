@@ -1,7 +1,7 @@
-/* eslint-disable */
+ /* eslint-disable */
 // Booking page. Routes each project to the right portal:
 //   Real estate  -> HD Photo Hub order page
-//   Everything else ->Calendly
+//   Everything else -> Calendly
 const HD_BOOKING_URL = "https://immersivephotography.hd.pics/order";
 const CLOUDSPOT_BOOKING_URL = "https://calendly.com/immersivedigital-wy";
 function PageContact({ onNavigate }) {
