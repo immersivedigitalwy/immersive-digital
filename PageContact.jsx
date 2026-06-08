@@ -3,8 +3,7 @@
 //   Real estate  -> HD Photo Hub order page
 //   Everything else -> CloudSpot scheduling
 const HD_BOOKING_URL = "https://immersivephotography.hd.pics/order";
-const CLOUDSPOT_BOOKING_URL = "https://immersive-digital-co.studio.cloudspot.io/scheduling";
-
+const CLOUDSPOT_BOOKING_URL = "https://calendly.com/immersivedigital-wy";
 function PageContact({ onNavigate }) {
   return (
     <main data-screen-label="05 Book">
