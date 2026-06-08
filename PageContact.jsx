@@ -1,7 +1,7 @@
 /* eslint-disable */
 // Booking page. Routes each project to the right portal:
 //   Real estate  -> HD Photo Hub order page
-//   Everything else -> CloudSpot scheduling
+//   Everything else ->Calendly
 const HD_BOOKING_URL = "https://immersivephotography.hd.pics/order";
 const CLOUDSPOT_BOOKING_URL = "https://calendly.com/immersivedigital-wy";
 function PageContact({ onNavigate }) {
@@ -53,11 +53,11 @@ function PageContact({ onNavigate }) {
                 </h2>
                 <p style={{ color: "#888", fontSize: 15, lineHeight: 1.7, marginTop: 16, maxWidth: "48ch" }}>
                   Aerial work, virtual tours, brand and web projects, social plans, or just a
-                  30 minute call to scope it out. Grab a time on CloudSpot.
+                  30 minute call to scope it out. Grab a time on Calendly.
                 </p>
                 <div style={{ marginTop: 26 }}>
                   <a className="btn primary" href={CLOUDSPOT_BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                    Book on CloudSpot <span className="arrow">→</span>
+                    Book a call <span className="arrow">→</span>
                   </a>
                 </div>
               </div>
