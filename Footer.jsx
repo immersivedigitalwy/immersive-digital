@@ -61,7 +61,7 @@ Facebook
 </a>
 </li>
 <li>
-<a href="https://linkedin.com/company/immersivedigitalco" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+<a href="https://www.linkedin.com/company/immersive-digital-co/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
 <span className="ico" aria-hidden="true">
 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
 <rect x="3" y="3" width="18" height="18" rx="2" />
