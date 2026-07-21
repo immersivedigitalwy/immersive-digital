@@ -195,8 +195,8 @@ window.SERVICES_DATA = [
     num: "05",
     label: "Web Build",
     tag: "14 DAYS · FLAT FEE",
-    title: "Live in fourteen days. You own the domain.",
-    intro: "A real website. Mobile-first. Lead capture wired to your inbox. Hosted somewhere you can leave anytime. Flat fee, no hourly drift, no nine-month timeline.",
+    title: "Built in fourteen days. You own the domain.",
+        intro: "A real website. Mobile-first. Lead capture wired to your inbox. Hosted somewhere you can leave anytime. Flat fee, no hourly drift. The build takes about two weeks — going live depends on how fast we work through your revisions.",
     body: "Mobile-first website built on Framer or your CMS of choice. Real copy, real photos, lead capture wired straight to your inbox. Two rounds of revisions and a 30-day warranty on bugs.",
     bullets: [
       "Mobile-first responsive build",
