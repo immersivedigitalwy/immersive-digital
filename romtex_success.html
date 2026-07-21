@@ -3,59 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Ready | Immersive Media Co.</title>
+    <title>Download Success | Immersive Digital Co</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #fafafa;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0A0A0A; 
+            color: #FFFFFF; 
             margin: 0;
             padding: 100px 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
         .success-box {
-            background: #fff;
+            background-color: #282828; 
             padding: 60px 40px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            max-width: 650px;
+            width: 100%;
+            text-align: center;
         }
         h1 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: #FFFFFF;
         }
         p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 40px;
-            line-height: 1.6;
+            color: #F5F5F5; 
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 45px;
+            font-weight: 400;
         }
         .download-button {
             display: inline-block;
-            background-color: #000;
-            color: #fff;
-            padding: 18px 40px;
+            background-color: #C6F84E; 
+            color: #0A0A0A; 
+            padding: 20px 50px;
             text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: background 0.3s ease;
+            font-size: 1.4rem;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         .download-button:hover {
-            background-color: #333;
+            background-color: #b5e63d; 
+            transform: translateY(-3px); 
+        }
+        .download-button:active {
+            transform: translateY(1px); 
+        }
+        .brand-dot {
+            color: #C6F84E;
         }
     </style>
 </head>
 <body>
 
-<div class="success-box">
-    <h1>Payment Successful</h1>
-    <p>Thank you for choosing Immersive Media Co. Your high resolution media has been packaged into a single zip file and is ready for download.</p>
-    
-    <!-- Paste your modified Google Drive Direct Download Link in the href below -->
-    <a href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" class="download-button">Download High Resolution Files</a>
-</div>
+    <div class="success-box">
+        <h1>Payment Successful<span class="brand-dot">.</span></h1>
+        <p>Thank you for your business. Your invoice has been paid and your high resolution files are ready. Click below to begin your direct download.</p>
+        
+        <a href="https://drive.google.com/uc?export=download&id=1zotPomCNoSSKDqlhcIlfs3m8mekjRjbd" class="download-button">Download Final Files</a>
+    </div>
 
 </body>
 </html>
