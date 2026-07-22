@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Prep Your Home for Photos · Immersive Digital Co</title>
+<meta name="description" content="How to prepare your home for a professional real estate photography session with Immersive Digital Co in Laramie, Wyoming and Northern Colorado.">
+<link rel="icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lime:#C6F84E; --lime-deep:#A8DA32; --lime-soft:rgba(198,248,78,.12);
+  --black:#0A0A0A; --graphite:#1A1A1A; --card:#141414; --charcoal:#282828;
+  --gray:#888; --gray-soft:#3D3D3D; --offwhite:#F5F5F5; --white:#fff;
+  --font:"Poppins","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:var(--font); background:var(--black); color:var(--white);
+  font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+a{color:var(--lime); text-decoration:none}
+a:hover{color:var(--lime-deep)}
+.wrap{max-width:1080px; margin:0 auto; padding:0 20px}
+
+/* ---- sticky top bar + progress ---- */
+.topbar{
+  position:sticky; top:0; z-index:50; background:rgba(10,10,10,.88);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--gray-soft);
+}
+.topbar .wrap{display:flex; align-items:center; justify-content:space-between; height:58px}
+.wordmark{font-weight:700; letter-spacing:-.01em; text-transform:lowercase; font-size:16px; color:#fff}
+.wordmark b{color:var(--lime)}
+.progwrap{display:flex; align-items:center; gap:10px; font-size:12px; color:var(--gray); letter-spacing:.06em}
+.progtrack{width:120px; height:6px; border-radius:999px; background:var(--charcoal); overflow:hidden}
+.progbar{height:100%; width:0%; background:var(--lime); transition:width .35s cubic-bezier(.22,1,.36,1)}
+.progpct{font-weight:600; color:var(--white); min-width:34px; text-align:right}
+@media(max-width:560px){
+  .topbar .wrap{height:52px}
+  .wordmark{font-size:14px}
+  .progwrap .print-hide{display:none}
+  .progtrack{width:72px}
+  .chips{top:52px}
+}
+
+/* ---- hero ---- */
+.hero{position:relative; padding:88px 0 64px; overflow:hidden; border-bottom:1px solid var(--gray-soft)}
+.hero::before{
+  content:""; position:absolute; inset:0; z-index:0;
+  background:radial-gradient(1200px 500px at 78% -10%, var(--lime-soft), transparent 60%);
+}
+.hero .wrap{position:relative; z-index:1}
+.eyebrow{font-size:12px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--lime); margin:0 0 16px}
+.hero h1{font-weight:700; font-size:clamp(34px,6vw,60px); line-height:1.05; letter-spacing:-.02em; margin:0 0 20px; text-wrap:balance}
+.hero p{max-width:62ch; color:var(--offwhite); font-size:17px; margin:0 0 14px}
+.hero .fine{color:var(--gray); font-size:14px; max-width:62ch}
+.rule{height:2px; border:0; width:100%; margin:26px 0; background:linear-gradient(to right,var(--lime) 0%,var(--lime) 70%,rgba(198,248,78,0) 100%)}
+.cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
+.btn{
+  display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:15px; cursor:pointer;
+  padding:13px 24px; border-radius:6px; border:1px solid var(--lime); background:var(--lime); color:var(--black);
+  transition:background .16s,box-shadow .16s,transform .16s; text-decoration:none;
+}
+.btn:hover{background:var(--lime-deep); border-color:var(--lime-deep); color:var(--black); box-shadow:0 10px 28px -10px rgba(198,248,78,.45)}
+.btn.ghost{background:transparent; color:#fff; border-color:var(--gray-soft)}
+.btn.ghost:hover{background:var(--graphite); color:#fff; box-shadow:none; border-color:var(--charcoal)}
+
+/* ---- section anchors nav ---- */
+.chips{position:sticky; top:58px; z-index:40; background:rgba(10,10,10,.9); backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--gray-soft); padding:12px 0}
+.chips .wrap{display:flex; gap:8px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none}
+.chips .wrap::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap; font-size:13px; font-weight:600; letter-spacing:.02em; color:var(--gray);
+  border:1px solid var(--gray-soft); border-radius:999px; padding:7px 15px; transition:.16s}
+.chip:hover{color:#fff; border-color:var(--charcoal)}
+.chip.active{color:var(--black); background:var(--lime); border-color:var(--lime)}
+
+/* ---- sections ---- */
+section.block{padding:56px 0; border-bottom:1px solid var(--gray-soft); scroll-margin-top:120px}
+.sec-eyebrow{font-size:12px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--lime); margin:0 0 10px}
+.block h2{font-weight:700; font-size:clamp(26px,4vw,38px); line-height:1.15; letter-spacing:-.01em; margin:0 0 12px}
+.block .lead{color:var(--offwhite); max-width:66ch; margin:0 0 30px; font-size:16px}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
+.pcard{background:var(--card); border:1px solid var(--charcoal); border-radius:12px; padding:22px 22px 8px}
+.pcard h3{font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); margin:0 0 6px}
+
+/* ---- check items ---- */
+ul.checks{list-style:none; margin:0; padding:0}
+ul.checks li{margin:0}
+.check{display:flex; gap:12px; align-items:flex-start; padding:11px 4px; cursor:pointer; user-select:none;
+  border-bottom:1px solid rgba(61,61,61,.5)}
+.pcard ul.checks li:last-child .check{border-bottom:0}
+.check input{position:absolute; opacity:0; width:0; height:0}
+.box{flex:0 0 auto; width:22px; height:22px; border-radius:6px; border:2px solid var(--gray-soft);
+  margin-top:1px; display:flex; align-items:center; justify-content:center; transition:.16s; background:transparent}
+.box svg{width:13px; height:13px; opacity:0; transform:scale(.5); transition:.16s}
+.check .txt{font-size:15px; color:var(--offwhite); line-height:1.45; transition:.16s}
+.check:hover .box{border-color:var(--lime)}
+.check.done .box{background:var(--lime); border-color:var(--lime)}
+.check.done .box svg{opacity:1; transform:scale(1)}
+.check.done .txt{color:var(--gray); text-decoration:line-through; text-decoration-color:var(--gray-soft)}
+
+/* ---- local conditions callout ---- */
+.local{background:linear-gradient(180deg,rgba(198,248,78,.06),rgba(198,248,78,.02));
+  border:1px solid var(--gray-soft); border-left:3px solid var(--lime); border-radius:12px; padding:26px 26px 8px; margin-top:8px}
+.local h3{margin:0 0 4px; font-size:19px; font-weight:700; color:#fff}
+.local .sub{color:var(--gray); font-size:13px; margin:0 0 14px; letter-spacing:.02em}
+.local ul{list-style:none; margin:0; padding:0}
+.local li{padding:12px 0; border-bottom:1px solid rgba(61,61,61,.5); display:flex; gap:12px; align-items:flex-start}
+.local li:last-child{border-bottom:0}
+.local li b{color:var(--lime); font-weight:600}
+.local .ic{flex:0 0 auto; margin-top:2px}
+
+/* ---- timing estimator ---- */
+.tools{display:grid; grid-template-columns:1.1fr .9fr; gap:18px; margin-top:8px}
+@media(max-width:720px){.tools{grid-template-columns:1fr}}
+.tool{background:var(--card); border:1px solid var(--charcoal); border-radius:12px; padding:24px}
+.tool h3{margin:0 0 6px; font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--lime)}
+.tool p.note{color:var(--gray); font-size:13px; margin:0 0 16px}
+.estrow{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.estrow label{font-size:14px; color:var(--offwhite)}
+.estrow input{width:120px; background:var(--black); border:1px solid var(--gray-soft); border-radius:6px;
+  color:#fff; font-family:inherit; font-size:16px; padding:10px 12px}
+.estrow input:focus{outline:none; border-color:var(--lime)}
+.estrow select{background:var(--black); border:1px solid var(--gray-soft); border-radius:6px; color:#fff;
+  font-family:inherit; font-size:14px; padding:10px 12px}
+.estout{margin-top:18px; font-size:15px; color:var(--offwhite)}
+.estout b{color:var(--lime); font-size:22px; font-weight:700; display:block; margin-top:4px}
+
+/* ---- quick checklist / steps ---- */
+.steps{counter-reset:step; display:grid; gap:14px}
+.step{display:flex; gap:16px; background:var(--card); border:1px solid var(--charcoal); border-radius:12px; padding:20px 22px}
+.step .num{counter-increment:step; flex:0 0 auto; width:38px; height:38px; border-radius:999px; background:var(--lime-soft);
+  border:1px solid var(--lime); color:var(--lime); font-weight:700; display:flex; align-items:center; justify-content:center; font-size:16px}
+.step .num::before{content:counter(step)}
+.step h4{margin:0 0 4px; font-size:16px; font-weight:600; color:#fff}
+.step p{margin:0; color:var(--gray); font-size:14px}
+
+/* ---- info notes ---- */
+.note-card{background:var(--graphite); border:1px solid var(--gray-soft); border-radius:12px; padding:20px 22px; margin-top:18px}
+.note-card b{color:#fff}
+.note-card.lime{border-left:3px solid var(--lime)}
+
+/* ---- disclosure + footer ---- */
+.disclosure{padding:48px 0; color:var(--gray); font-size:13px; line-height:1.6}
+.disclosure h4{color:#fff; font-size:14px; letter-spacing:.1em; text-transform:uppercase; margin:0 0 10px}
+footer{border-top:1px solid var(--gray-soft); padding:34px 0 60px; color:var(--gray); font-size:13px}
+footer .wrap{display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between; align-items:center}
+footer a{color:var(--gray)}
+footer a:hover{color:var(--lime)}
+
+/* ---- print ---- */
+@media print{
+  .topbar,.chips,.cta-row,.tool,.print-hide{display:none !important}
+  body{background:#fff; color:#000}
+  .hero,section.block,footer{border-color:#ccc}
+  .hero::before,.local{background:none}
+  .pcard,.step,.note-card,.local{border:1px solid #bbb; break-inside:avoid}
+  .eyebrow,.sec-eyebrow,.pcard h3,.local h3,.step .num{color:#000 !important}
+  .check .txt,.hero p,.block .lead,.local li{color:#000 !important}
+  .box{border-color:#000}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="https://immersivedigital.co">immersive digital co<b>.</b></a>
+    <div class="progwrap">
+      <span class="print-hide">Prep complete</span>
+      <div class="progtrack"><div class="progbar" id="progbar"></div></div>
+      <span class="progpct" id="progpct">0%</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Owner Prep Guide · Laramie &amp; Northern Colorado</p>
+    <h1>Prepping your home for professional photos</h1>
+    <p>A little preparation goes a long way. The more you check off before our photographer arrives, the smoother and faster your session runs, and the better your listing looks.</p>
+    <p class="fine">Please have all occupants, including pets, away from the property during the shoot, or at minimum secured in a separate room. If any rooms should be excluded, let us know as early as possible.</p>
+    <div class="cta-row">
+      <a class="btn" href="#checklist">Jump to quick checklist</a>
+      <a class="btn ghost" href="#" id="printBtn">Print / save as PDF</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CHIPS ============ -->
+<nav class="chips" id="chips">
+  <div class="wrap">
+    <a class="chip" href="#exterior">Exterior</a>
+    <a class="chip" href="#interior">Interior</a>
+    <a class="chip" href="#kitchen">Kitchen</a>
+    <a class="chip" href="#living">Living &amp; Bedrooms</a>
+    <a class="chip" href="#bath">Bathrooms</a>
+    <a class="chip" href="#local">Local Conditions</a>
+    <a class="chip" href="#checklist">Quick Checklist</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ EXTERIOR ============ -->
+<section class="block" id="exterior">
+  <p class="sec-eyebrow">01 · Exterior</p>
+  <h2>Curb appeal matters</h2>
+  <p class="lead">First impressions start outside. A tidy, welcoming exterior sets the tone for every photo that follows.</p>
+  <div class="grid">
+    <div class="pcard">
+      <h3>Vehicles &amp; Storage</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Park vehicles down the street or inside the garage</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Store trash and recycling bins in the garage or shed</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Put away garden hoses, tools, and outdoor equipment</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Store bikes, toys, and seasonal decor out of sight</span></label></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>Lawn &amp; Landscaping</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Mow the lawn and rake up leaves and cottonwood debris</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Pull weeds and remove any dead plants</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Refresh mulch or rock beds for a polished look</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Clear pine needles and foliage from the roof and gutters</span></label></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>Cleaning &amp; Staging</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Sweep walkways, porches, and all outdoor spaces</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Wash windows and glass doors</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Clean and straighten outdoor furniture</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Add pillows and open umbrellas to stage the space (calm days only)</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERIOR ============ -->
+<section class="block" id="interior">
+  <p class="sec-eyebrow">02 · Interior</p>
+  <h2>Set the stage</h2>
+  <p class="lead">A clean, bright, and decluttered interior photographs beautifully. These steps help every room look its absolute best on camera.</p>
+  <div class="grid">
+    <div class="pcard">
+      <h3>Lighting &amp; Windows</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Turn on every light, including closets, exterior, and bedside lamps</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Replace burned-out bulbs; use matching bulbs throughout</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Pull blinds down and open them all the same direction</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Pull curtains fully open to maximize natural light</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Clean mirrors and interior windows throughout</span></label></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>Declutter &amp; Depersonalize</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Clear all countertops and remove clutter</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Remove family photos, names, and personal or religious items</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Turn off and dust all TVs, monitors, and screens</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Store remotes, chargers, and cables out of sight</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Remove excess furniture, knick-knacks, and toys</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Empty all wastebaskets</span></label></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>Quick Room Resets</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Turn off all ceiling fans; store portable fans</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Vacuum carpets and polish hard floors</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Straighten furniture and open up crowded rooms</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Secure pets away from the property, or locked in one room</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KITCHEN ============ -->
+<section class="block" id="kitchen">
+  <p class="sec-eyebrow">03 · Kitchen</p>
+  <h2>Clean &amp; camera-ready</h2>
+  <p class="lead">The kitchen is one of the most photographed rooms in any listing. Clear counters and sparkling appliances make an immediate impression on buyers.</p>
+  <div class="grid">
+    <div class="pcard">
+      <h3>Clear the Counters</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Remove food, dishes, and small appliances</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Store soaps, towels, and cleaning supplies; counters nearly bare</span></label></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>Clean Everything</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Wipe down all surfaces and appliances</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Sweep and mop the floor; remove worn rugs</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Put away draining racks completely</span></label></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>Refrigerator &amp; Pantry</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Remove magnets, photos, and notes from the fridge door</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Tidy open shelves and the pantry in case they're captured</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVING & BEDROOMS ============ -->
+<section class="block" id="living">
+  <p class="sec-eyebrow">04 · Living Areas &amp; Bedrooms</p>
+  <h2>Inviting, not personal</h2>
+  <p class="lead">These spaces should feel spacious and styled, but not overly personal. Thoughtful staging here helps buyers imagine themselves living in the home.</p>
+  <div class="grid">
+    <div class="pcard">
+      <h3>Living Areas</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Minimize personal photos and decorative items</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Organize bookshelves and reduce visible clutter</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Remove excess furniture and accessories to open the space</span></label></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>Bedrooms</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Make all beds and arrange decorative pillows neatly</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Store clothing, shoes, and laundry out of sight</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Tidy closets and declutter bedside tables</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Organize kids' rooms and clear items from under beds</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BATHROOMS ============ -->
+<section class="block" id="bath">
+  <p class="sec-eyebrow">05 · Bathrooms</p>
+  <h2>Spa-clean &amp; simple</h2>
+  <p class="lead">Bathrooms should look spotless and serene, think hotel-level clean. Remove the everyday clutter and keep only the essentials that look intentional.</p>
+  <div class="grid">
+    <div class="pcard">
+      <h3>Toilets &amp; Tubs</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Close all toilet lids before photography begins</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Leave shower curtains open; clear tubs and showers of clutter and soaps</span></label></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>Towels &amp; Linens</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Wash towels and rugs</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Hang towels neatly; fold or roll washcloths if displayed</span></label></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <h3>Clear Counters</h3>
+      <ul class="checks">
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Store all countertop items</span></label></li>
+        <li><label class="check"><input type="checkbox"><span class="box">✓</span><span class="txt">Hide toilet brushes, plungers, and wastebaskets</span></label></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCAL CONDITIONS ============ -->
+<section class="block" id="local">
+  <p class="sec-eyebrow">06 · Local Conditions</p>
+  <h2>Laramie &amp; the high plains</h2>
+  <p class="lead">At 7,200 feet, our weather does its own thing. A few extra minutes on these seasonal items keeps your exteriors and drone shots looking their best.</p>
+  <div class="local">
+    <h3>Weather &amp; seasonal prep for Wyoming and Northern Colorado</h3>
+    <p class="sub">Check whichever apply on your shoot date.</p>
+    <ul>
+      <li><span class="ic">❄️</span><span><b>Snow &amp; ice.</b> Shovel and de-ice all sidewalks, driveways, porches, and decks. Brush snow off patio furniture, grills, and parked cars so the property reads clean.</span></li>
+      <li><span class="ic">💨</span><span><b>Wind.</b> Laramie is one of the windiest spots in the country. Bring in or secure anything that blows around, patio cushions, flags, umbrellas, trampolines, and light decor, and skip staging with open umbrellas on gusty days.</span></li>
+      <li><span class="ic">🌾</span><span><b>Dormant or brown lawns.</b> From late fall through spring, grass goes brown and dormant at this altitude. That's normal, we can enhance color in editing. Just clear leaves, cottonwood fluff, and dead growth so beds look tended.</span></li>
+      <li><span class="ic">🥾</span><span><b>Mud &amp; spring melt.</b> During thaw and mud season, hose off walkways, put down clean mats, and wipe muddy paw and boot prints near entries.</span></li>
+      <li><span class="ic">🔥</span><span><b>Wildfire smoke.</b> Heavy late-summer smoke flattens light and hazes exteriors and aerials. If air quality is poor on your date, we may suggest rescheduling exteriors, twilight, or drone for a clearer day.</span></li>
+      <li><span class="ic">🚁</span><span><b>Drone days.</b> If aerials are part of your package, high winds or storms can ground the drone for safety. A little date flexibility helps us catch the calm, clear window.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ QUICK CHECKLIST ============ -->
+<section class="block" id="checklist">
+  <p class="sec-eyebrow">07 · Day Of</p>
+  <h2>Your quick-reference checklist</h2>
+  <p class="lead">Use this at-a-glance summary on shoot day to make sure nothing is missed. A fully prepped home means faster photos and a more impressive listing.</p>
+
+  <div class="tools">
+    <div class="tool">
+      <h3>Timing estimator</h3>
+      <p class="note">Plan roughly 1 hour per 1,000 sq ft. Add Matterport, video, or aerials and it's closer to 2 hours per 1,000 sq ft.</p>
+      <div class="estrow">
+        <label for="sqft">Home size</label>
+        <input type="number" id="sqft" min="0" step="100" placeholder="2000" inputmode="numeric">
+        <span style="color:var(--gray)">sq ft</span>
+        <select id="pkg">
+          <option value="1">Photos only</option>
+          <option value="2">Photos + Matterport / video / drone</option>
+        </select>
+      </div>
+      <div class="estout">Estimated time on site<b id="estval">Enter your square footage</b></div>
+    </div>
+    <div class="tool">
+      <h3>Before we arrive</h3>
+      <p class="note" style="margin-bottom:14px">The two that matter most:</p>
+      <div class="note-card lime" style="margin:0 0 12px">Every light on, every blind and curtain open.</div>
+      <div class="note-card lime" style="margin:0">People and pets away for the full session.</div>
+    </div>
+  </div>
+
+  <div class="steps" style="margin-top:26px">
+    <div class="step"><span class="num"></span><div><h4>Outside first</h4><p>Park vehicles, tidy landscaping, sweep walkways, stage outdoor furniture, and put away all bins, tools, and toys. In winter, clear snow and ice.</p></div></div>
+    <div class="step"><span class="num"></span><div><h4>Light it up</h4><p>Turn on every light in the home. Open all blinds and curtains. Replace burned-out bulbs with matching sets.</p></div></div>
+    <div class="step"><span class="num"></span><div><h4>Declutter &amp; depersonalize</h4><p>Clear countertops throughout. Remove personal items, family photos, and excess decor from every room.</p></div></div>
+    <div class="step"><span class="num"></span><div><h4>Kitchen &amp; bathrooms</h4><p>Wipe all surfaces, store everyday items, close toilet lids, and display only fresh, neatly folded towels.</p></div></div>
+    <div class="step"><span class="num"></span><div><h4>Pets &amp; people out</h4><p>Arrange for all occupants to be away for the full shoot. Pets away too, or securely locked in a separate room.</p></div></div>
+  </div>
+
+  <div class="note-card" style="margin-top:22px">💬 <b>Questions before the shoot?</b> Reach out to your Realtor or to us directly. We're here to help your listing look its very best.</div>
+</section>
+
+</div><!-- /.wrap -->
+
+<!-- ============ DISCLOSURE ============ -->
+<div class="wrap">
+  <div class="disclosure">
+    <h4>Photography Disclosure</h4>
+    <p>Professional photographs may be used by Immersive Digital Co for marketing and promotional purposes, including on our website, social media, and other business materials. Follow us on Instagram and Facebook to see more of our work and stay updated on our latest projects.</p>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <a class="wordmark" href="https://immersivedigital.co" style="font-size:15px">immersive digital co<b style="color:var(--lime)">.</b></a>
+    <span>Drone · Photo · 360 · Web · Brand — Laramie, WY</span>
+    <a href="https://immersivedigital.co/contact">Book a session →</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var STORAGE_KEY = "idc-prep-owners-v1";
+  var checks = Array.prototype.slice.call(document.querySelectorAll(".check"));
+
+  // assign stable ids by index
+  checks.forEach(function(c,i){ c.dataset.k = "c"+i; });
+
+  function load(){
+    try{ return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }catch(e){ return {}; }
+  }
+  function save(state){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+  }
+
+  var state = load();
+
+  function apply(c){
+    var on = !!state[c.dataset.k];
+    c.classList.toggle("done", on);
+    var input = c.querySelector("input");
+    if(input) input.checked = on;
+  }
+  function updateProgress(){
+    var done = checks.filter(function(c){ return state[c.dataset.k]; }).length;
+    var pct = checks.length ? Math.round(done/checks.length*100) : 0;
+    document.getElementById("progbar").style.width = pct + "%";
+    document.getElementById("progpct").textContent = pct + "%";
+  }
+
+  checks.forEach(function(c){
+    apply(c);
+    c.addEventListener("click", function(e){
+      // prevent double toggle from the hidden input
+      if(e.target.tagName === "INPUT") return;
+      e.preventDefault();
+      state[c.dataset.k] = !state[c.dataset.k];
+      apply(c); save(state); updateProgress();
+    });
+    var input = c.querySelector("input");
+    if(input){
+      input.addEventListener("change", function(){
+        state[c.dataset.k] = input.checked;
+        apply(c); save(state); updateProgress();
+      });
+    }
+  });
+  updateProgress();
+
+  // print
+  document.getElementById("printBtn").addEventListener("click", function(e){
+    e.preventDefault(); window.print();
+  });
+
+  // timing estimator
+  var sqft = document.getElementById("sqft");
+  var pkg = document.getElementById("pkg");
+  var out = document.getElementById("estval");
+  function fmt(hours){
+    var h = Math.floor(hours);
+    var m = Math.round((hours - h) * 60 / 15) * 15;
+    if(m === 60){ h += 1; m = 0; }
+    var parts = [];
+    if(h) parts.push(h + (h===1?" hr":" hrs"));
+    if(m) parts.push(m + " min");
+    return parts.length ? parts.join(" ") : "under 15 min";
+  }
+  function estimate(){
+    var v = parseFloat(sqft.value);
+    if(!v || v <= 0){ out.textContent = "Enter your square footage"; return; }
+    var rate = parseFloat(pkg.value); // hours per 1000 sqft
+    var hours = (v/1000) * rate;
+    if(hours < 0.75) hours = 0.75; // sensible minimum
+    out.textContent = "about " + fmt(hours);
+  }
+  sqft.addEventListener("input", estimate);
+  pkg.addEventListener("change", estimate);
+
+  // active chip on scroll
+  var chipLinks = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+  var sections = chipLinks.map(function(a){ return document.querySelector(a.getAttribute("href")); });
+  function onScroll(){
+    var y = window.scrollY + 140;
+    var idx = 0;
+    sections.forEach(function(s,i){ if(s && s.offsetTop <= y) idx = i; });
+    chipLinks.forEach(function(a,i){ a.classList.toggle("active", i === idx); });
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
